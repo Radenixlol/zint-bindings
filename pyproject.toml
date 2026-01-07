@@ -133,7 +133,7 @@ before-all = "dnf install -y curl zip unzip tar"  # For bootstrapping vcpkg (man
 [[tool.cibuildwheel.overrides]]
 select = "*-musllinux*"
 before-all = "apk add build-base cmake ninja zip unzip curl git"
-environment = {VCPKG_FORCE_SYSTEM_BINARIES="1"}
+environment = {VCPKG_FORCE_SYSTEM_BINARIES="1", CMAKE_POLICY_VERSION_MINIMUM="3.10"}
 
 [[tool.cibuildwheel.overrides]]
 select = "cp39-manylinux*"
