@@ -136,7 +136,7 @@ before-all = "apk add build-base cmake ninja zip unzip curl git"
 environment = {VCPKG_FORCE_SYSTEM_BINARIES="1"}
 
 [[tool.cibuildwheel.overrides]]
-select = "cp39-*"
+select = "cp39-manylinux*"
 manylinux-x86_64-image = "manylinux2014"
 manylinux-aarch64-image = "manylinux2014"
 before-all = "yum install -y curl zip unzip tar"  # For bootstrapping vcpkg (manylinux2014)
